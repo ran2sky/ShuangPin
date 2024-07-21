@@ -8,6 +8,10 @@ const Shuang = {
     scheme: {},
     emoji: {
       right: '✅', wrong: '❎'
+    },
+    audio: {
+      input: new Audio('audio/input.mp3'),
+      wrong: new Audio('audio/input-wrong.mp3')
     }
   },
   core: {

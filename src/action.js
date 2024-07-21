@@ -64,6 +64,9 @@ Shuang.app.action = {
         } else {
           event.returnValue = false
         }
+      } else {
+        Shuang.resource.audio.input.currentTime = 0;
+        Shuang.resource.audio.input.play();
       }
     })
     document.addEventListener('keyup', e => {
@@ -175,6 +178,10 @@ Shuang.app.action = {
             this.next(e.simulated)
           } else if (!isRight && Shuang.app.setting.config.autoClear === 'true') {
             this.redo(e.simulated)
+            Shuang.resource.audio.wrong.currentTime = 0;
+            Shuang.resource.audio.wrong.play();
+
+            this.redo(e.simulated);
           }
         }
     }
